@@ -40,5 +40,8 @@ js/rules.js         live fight engine (pace checks, blows traded), levels, fair-
 js/storage.js       localStorage save/load
 js/format.js        time, pace and goal text for display
 data/monsters.json  monster definitions (format documented in "_format")
+icons/              app icons (browser tab, iPhone and Android home screen)
+manifest.webmanifest  name and icons for "Add to Home Screen"
+tools/make_icon.py  redraws the icons: python3 tools/make_icon.py icons
 tests/              in-browser tests (open tests/index.html via the server)
 ```
