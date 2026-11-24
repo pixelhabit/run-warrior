@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run Warrior tests</title>
+  <style>
+    body { background: #1e1f22; color: #f2f2f2; font: 14px/1.5 ui-monospace, Menlo, monospace; padding: 16px; }
+    ul { list-style: none; padding: 0; }
+    .pass { color: #51cf66; }
+    .fail { color: #ff6b6b; }
+    .todo { color: #a0a0a6; }
+  </style>
+</head>
+<body>
+  <h1>Tests</h1>
+  <p id="summary">Running…</p>
+  <ul id="out"></ul>
+  <script type="module">
+    import { run } from './runner.js';
+    import './monsters.test.js';
+    import './rules.test.js';
+    import './format.test.js';
+    import './gps.test.js';
+
+    const { pass, fail, todos } = await run(document.getElementById('out'));
+    document.getElementById('summary').textContent = `${pass} passed, ${fail} failed, ${todos} todo`;
+  </script>
+</body>
+</html>

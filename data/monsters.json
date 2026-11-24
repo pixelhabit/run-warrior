@@ -1,0 +1,60 @@
+{
+  "_format": {
+    "id": "unique slug",
+    "name": "display name",
+    "art": "sprite name in js/sprites.js",
+    "scene": "battle backdrop, a key of THEMES in js/scene.js",
+    "stage": "order on the stage map; each stage unlocks after the one before is beaten",
+    "boss": "true for the final boss",
+    "hp": "hit points; the warrior's strikes drain them as the run covers the goal distance",
+    "attack": "damage per 30-second check when the runner is well off the pace target",
+    "goal.distanceKm": "distance to run in one go to win the fight",
+    "goal.paceByLevel": "pace target in seconds per km for levels 1 (slow runners) to 5 (fast runners)"
+  },
+  "monsters": [
+    {
+      "id": "slime",
+      "name": "Slime",
+      "art": "slime",
+      "scene": "meadow",
+      "stage": 1,
+      "boss": false,
+      "hp": 100,
+      "attack": 10,
+      "goal": { "distanceKm": 3, "paceByLevel": [495, 435, 375, 330, 285] }
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "art": "goblin",
+      "scene": "forest",
+      "stage": 2,
+      "boss": false,
+      "hp": 150,
+      "attack": 8,
+      "goal": { "distanceKm": 5, "paceByLevel": [510, 450, 390, 345, 300] }
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "art": "troll",
+      "scene": "mountain",
+      "stage": 3,
+      "boss": false,
+      "hp": 200,
+      "attack": 6,
+      "goal": { "distanceKm": 10, "paceByLevel": [525, 465, 405, 360, 315] }
+    },
+    {
+      "id": "dragon",
+      "name": "Dragon",
+      "art": "dragon",
+      "scene": "volcano",
+      "stage": 4,
+      "boss": true,
+      "hp": 400,
+      "attack": 5,
+      "goal": { "distanceKm": 21, "paceByLevel": [540, 480, 420, 375, 330] }
+    }
+  ]
+}
